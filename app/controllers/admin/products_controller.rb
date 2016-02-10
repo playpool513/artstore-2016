@@ -23,7 +23,7 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @photo = @product.photo
+    @photo = @product.photo || @product.build_photo
   end
 
   def update

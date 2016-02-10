@@ -18,5 +18,12 @@
     <%= f.input :price %>
   </div>
 
+  <% # FIXME shows 未選擇任何檔案 even if product has photo %>
+  <div class="form-group">
+    <%= f.simple_fields_for :photo do |c| %>
+      <%= c.input :image , as: :file %>
+    <% end %>
+  </div>
+
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 <% end %>

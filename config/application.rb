@@ -22,5 +22,9 @@ module Artstore
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # TODO Q: what's += ?
+    # TODO Q: where does the setting come from?
+    config.autoload_paths += %W(#{config.root}/app/uploaders)
   end
 end

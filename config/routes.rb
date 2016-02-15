@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :orders
+
   namespace :admin do
     resources :products
     resources :users do

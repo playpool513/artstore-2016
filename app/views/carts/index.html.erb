@@ -1,5 +1,11 @@
 <div class="row">
   <div class="col-md-12">
+    <%= link_to("清空購物車",
+                clean_carts_path,
+                method: :delete,
+                data: {confirm: "確定要清空購物車嗎？"},
+                style: "text-decoration: underline;",
+                class: "pull-right") %>
     <h2>購物車</h2>
     <table class="table table-bordered">
       <thead>

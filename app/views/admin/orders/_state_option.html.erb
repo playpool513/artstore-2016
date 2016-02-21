@@ -16,12 +16,12 @@
                 method: :post) %>
   <% when "shipping" %>
     <%= link_to("設為已出貨",
-                shipped_admin_order_path(order),
+                deliver_admin_order_path(order),
                 class: "btn btn-default btn-sm",
                 method: :post) %>
   <% when "shipped" %>
     <%= link_to("退貨",
-                return_admin_order_path(order),
+                return_good_admin_order_path(order),
                 class: "btn btn-default btn-sm",
                 method: :post) %>
   <% when "order_cancelled" %>

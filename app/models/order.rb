@@ -44,11 +44,11 @@ class Order < ActiveRecord::Base
   end
 
   def build_item_cache_from_cart(cart)
-    cart.items.each do |cart_item|
+    cart.items.each do |product|
       item = items.build
-      item.product_name = cart_item.title
+      item.product_name = product.title
       item.quantity = 1
-      item.price = cart_item.price
+      item.price = product.price
       item.save
     end
   end
